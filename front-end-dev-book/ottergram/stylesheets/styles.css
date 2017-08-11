@@ -3,14 +3,56 @@ body
 	font-size: 10px;
 	background: rgb(149, 194, 215);
 }
+body span /* ejemplo de un selector descendiente apunta a cualquier elemento de un tipo especificado */
+{
+	/* declaraciones style - Seleccionamos cualquier elemento span que es descendiente del elemento body */
+	/* esta sintaxis no usa combinators */
+}
+
+/* Usamos un class selector (o atributo selector) */
+body .thumbnail-title
+{
+
+}
+
+/* Child selector (>): el elemento a ser afectado por la regla es el elemento de la derecha cuando tiene al de la izq. como padre */
+/* ejemplo: modificamos los elementos span que son hijos de un elemento li */
+li > span
+{
+	/* declaraciones style */
+}
+
+/* Sibling selector(~) Este selector apunta a elementos objetivos con el mismo padre  */
+header ~ ul
+{
+	/* este selector apunta a cualquier elemento ul que es precedido por un header como padre pero este padre no necesita estar
+	   inmediatamente antes del elemento. Ademas, mas de un elemento puede ser afectado
+		 p.mitexto2 ~ p
+		 {
+		 		color : #990000;
+		 }*/
+}
+
+/* Selector + */
+li + li
+{
+	/* Este selector hacer referencia al elemento de la derecha cuando es inmediatamente precedido por el de la izquierda
+	   ambos elementos deben compartir el mismo padre */
+}
 .a
 {
 	/* eliminamos el underline en los nombre */
 	text-decoration: none;
 }
+
+.thumbnail-item + .thumbnail-item
+{
+	margin-top: 10px;
+}
 .thumbnail-list
 {
 	list-style: none;
+	padding: 0;
 }
 .thumbnail-item
 {
