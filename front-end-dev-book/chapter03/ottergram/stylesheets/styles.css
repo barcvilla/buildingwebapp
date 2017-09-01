@@ -9,6 +9,31 @@ body span /* ejemplo de un selector descendiente apunta a cualquier elemento de 
 	/* esta sintaxis no usa combinators */
 }
 
+@font-face /* nos permite asignar un nombre personalizado para una familia de fonts que luego usamos en los styles */
+{
+	font-family: 'lakeshore' //valor para identificar el nombre personalizado de la font que usaremos
+	// declaraciones src donde se ubican diferentes fonts files
+	src: url('fonts/LAKESHOR-webfont.eot');
+	src: url('fonts/LAKESHOR-webfont.eot?#iefix')format('embedded-opentype'),
+			 url('fonts/LAKESHOR-webfont.woff')format('woff'),
+			 url('fonts/LAKESHOR-webfont.ttf')format('truetype'),
+			 url('fonts/LAKESHOR-webfont.svg#lakeshore')format('svg');
+			 // declaraciones que modifican la presentacion de las fuentes
+			 font-weight: normal;
+			 font-style: normal;
+}
+
+.logo-text /* estilo para el logo */
+{
+	background: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: lakeshore;
+	font-size: 37px;
+}
+
+
+
 /* Usamos un class selector (o atributo selector) */
 body .thumbnail-title
 {
@@ -31,6 +56,17 @@ header ~ ul
 		 {
 		 		color : #990000;
 		 }*/
+}
+
+li
+{
+	background: red;
+}
+
+<li class="thumbnail-item" id="barry-otter">
+#barry-otter
+{
+	background: green;
 }
 
 /* Selector + */
@@ -56,6 +92,7 @@ li + li
 }
 .thumbnail-item
 {
+	background: blue;
 	display: block;
 	border: 1px solid rgb(100%, 100%, 100%);
 	border: 1px solid rgba(100%, 100%, 100%, 0.8);
